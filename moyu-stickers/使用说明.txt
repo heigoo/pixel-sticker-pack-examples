@@ -1,0 +1,62 @@
+「摸鱼日常」· TRAE宝 16 幕像素表情（pixel-sticker-pack 同源流水线）
+================================================================
+
+一、成品（output/，全部 512×512 透明底）
+
+png/            16 张带底部文案 PNG
+no-text/        16 张无文案 PNG
+gif/            16 张带文案循环 GIF
+gif-no-text/    16 张无文案循环 GIF
+overview.png    16 幕总览（无字缩略）
+overview.gif    16 幕同步动态总览
+screens-overview.png  16 幕屏幕表情特写
+keyframes-1/2.png     深色背景动作关键帧核对页
+manifest.json   每幕规格、强调色与素材使用清单
+
+GIF 默认 3.2 秒无限循环、12.5fps、40 帧；disposal=2 防残影，
+逐帧解码比对通过（见 test.py）。
+
+二、主题与叙事
+
+摸鱼 = 在屏幕上演小剧场：摸鱼时屏幕亮起小鱼，被抓时屏幕立刻花屏。
+四章：摸（上班如上坟/摸鱼启动/假装很忙/咖啡续命）
+→ 藏（老板来了/桌下偷看/摸鱼搭子/带薪如厕）
+→ 危（消息 99+/临时加活/战术装死/当场抓获）
+→ 爽（准点开溜/周五万岁/带薪摸鱼/梦里摸鱼）。
+
+色彩纪律：荧光绿/白为屏幕主色；红仅消息红点与当场抓获（09/12）；
+黄仅周五礼花（14）；蓝仅手机屏（06）。脚本自动审计。
+
+三、素材库
+
+assets/parts/          角色部件（方头、屏幕脸、短四肢、无嘴）
+assets/manifest.json   部件裁切坐标与关节枢轴
+assets/props/          像素道具库：新增小鱼、键盘、咖啡杯、手机、文件堆、
+                       手表、工牌、红点气泡、卷纸、鱼缸；复用汗滴/速度线/
+                       三色礼花/绿色星花/冲击星芒
+assets/screens/        16 幕屏幕表情静态帧与目录
+lib_base.py            调色板、5×7 字模、中文字模栅格化、屏幕表情原语
+                       （70×36 逻辑面板，t∈[0,1) 循环动画，t=0 即静态帧）
+theme.py               16 个屏幕模式 + 10 件主题道具的像素绘制
+scenes.json            16 幕唯一配置入口：姿态/道具/关键帧轨道
+
+四、运行
+
+    python -m pip install -r requirements.txt
+    python build_assets.py     # 仅改像素设计后需要
+    python render.py           # PNG + GIF + 总览
+    python test.py             # 全套验证
+
+常用：
+    python render.py --only 09_red99 --text "消息爆了"
+    python render.py --static-only
+    python render.py --size 240 --fps 10 --duration-ms 2400
+    python test.py --quick     # 仅结构检查
+
+五、改配置不改素材
+
+每幕 = screen（16 种屏幕表情模式之一）+ pose + tracks（关键帧轨道）
++ props/effects（道具与特效，支持 wrist 锚点与 blink/pulse/bob/sway 循环动画）。
+轨道时间归一化 0–1，首尾同值即循环闭环；新增表情复制一幕换 id 即可。
+中文文案与屏幕文字一律由程序排版（cn_text 栅格化 / latin 5×7 点阵），
+不手绘、不交给生成模型。

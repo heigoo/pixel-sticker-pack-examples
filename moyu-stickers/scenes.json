@@ -1,0 +1,1836 @@
+{
+  "version": 1,
+  "pack": "TRAE宝摸鱼日常",
+  "defaults": {
+    "size": 512,
+    "outline": 8,
+    "fps": 12.5,
+    "duration_ms": 3200
+  },
+  "design": {
+    "character": "TRAE宝：黑色方形脑袋、屏幕即表情、哑光黑方块机身；16 幕体型比例不变",
+    "core_idea": "摸鱼 = 在屏幕上演小剧场：摸鱼时屏幕亮起小鱼，被抓时屏幕立刻花屏；红仅消息与翻车，黄仅周五礼花，蓝仅手机屏",
+    "coordinates": "640×640；左右指观众视角；角度逆时针为正",
+    "overview_title": "TRAE宝摸鱼日常 / 16 幕像素表情",
+    "overview_subtitle": "摸 · 藏 · 危 · 爽   上班八小时，摸鱼七小时半",
+    "chapter_tones": {
+      "摸": "#5ADB97",
+      "藏": "#A9E6CC",
+      "危": "#EC6269",
+      "爽": "#F4CD70"
+    },
+    "chapters": "摸藏危爽",
+    "discipline": {
+      "red": [
+        "09_red99",
+        "12_caught"
+      ],
+      "gold": [
+        "14_tgif"
+      ],
+      "blue": [
+        "06_sneak"
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "01_monday",
+      "chapter": "摸①",
+      "caption": "上班如上坟",
+      "action": "拖着步子挪进门，工牌在胸前晃，脖子一点点往下垂",
+      "screen": "monday",
+      "screen_brief": "9AM、半闭眼与垂下的嘴角线",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "legs": [
+          -4,
+          4
+        ],
+        "head_angle": 6
+      },
+      "props": [
+        {
+          "asset": "badge",
+          "center": [
+            320,
+            382
+          ],
+          "scale": 0.8,
+          "anim": {
+            "type": "sway",
+            "freq": 1,
+            "amp": 5
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "legs.0",
+          "keys": [
+            [
+              0,
+              -4
+            ],
+            [
+              0.5,
+              4
+            ],
+            [
+              1,
+              -4
+            ]
+          ]
+        },
+        {
+          "path": "legs.1",
+          "keys": [
+            [
+              0,
+              4
+            ],
+            [
+              0.5,
+              -4
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              7
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              6
+            ],
+            [
+              0.5,
+              10
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02_slack_start",
+      "chapter": "摸②",
+      "caption": "摸鱼启动",
+      "action": "双手从身侧捧起一条像素小鱼，托到胸前晃两下",
+      "screen": "slack_start",
+      "screen_brief": "小鱼巡游与眯眼笑",
+      "pose": {
+        "arms": [
+          62,
+          -62
+        ]
+      },
+      "props": [
+        {
+          "asset": "fish",
+          "center": [
+            320,
+            392
+          ],
+          "scale": 1.15,
+          "anim": {
+            "type": "bob",
+            "freq": 2,
+            "amp": 4
+          }
+        }
+      ],
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            492,
+            160
+          ],
+          "scale": 0.9,
+          "anim": {
+            "type": "blink",
+            "freq": 2,
+            "duty": 0.6
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              52
+            ],
+            [
+              0.5,
+              66
+            ],
+            [
+              1,
+              52
+            ]
+          ]
+        },
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              -52
+            ],
+            [
+              0.5,
+              -66
+            ],
+            [
+              1,
+              -52
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              -5
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03_busy",
+      "chapter": "摸③",
+      "caption": "假装很忙",
+      "action": "伏案狂敲键盘，肩膀一耸一耸，脑袋高频点动",
+      "screen": "busy",
+      "screen_brief": "WORKING 与来回扫的进度条",
+      "pose": {
+        "arms": [
+          42,
+          -42
+        ],
+        "head_angle": 3
+      },
+      "props": [
+        {
+          "asset": "keyboard",
+          "center": [
+            320,
+            420
+          ],
+          "scale": 1.15
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              -2
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              -2
+            ],
+            [
+              0.8,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              2
+            ],
+            [
+              0.2,
+              5
+            ],
+            [
+              0.4,
+              2
+            ],
+            [
+              0.6,
+              5
+            ],
+            [
+              0.8,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              40
+            ],
+            [
+              0.5,
+              46
+            ],
+            [
+              1,
+              40
+            ]
+          ]
+        },
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              -40
+            ],
+            [
+              0.5,
+              -46
+            ],
+            [
+              1,
+              -40
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04_coffee",
+      "chapter": "摸④",
+      "caption": "咖啡续命",
+      "action": "单手把咖啡杯举到脸前，仰头猛灌一口，杯口热气直冒",
+      "screen": "coffee",
+      "screen_brief": "COFFEE、热气与半闭眼",
+      "pose": {
+        "arms": [
+          -150,
+          0
+        ],
+        "head_angle": 2
+      },
+      "props": [
+        {
+          "asset": "coffee",
+          "anchor": "left_wrist",
+          "offset": [
+            22,
+            10
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "bob",
+            "freq": 2,
+            "amp": 3
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              -150
+            ],
+            [
+              0.35,
+              -128
+            ],
+            [
+              0.7,
+              -150
+            ],
+            [
+              1,
+              -150
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              2
+            ],
+            [
+              0.3,
+              7
+            ],
+            [
+              0.55,
+              7
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              -4
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05_pretend",
+      "chapter": "藏①",
+      "caption": "老板来了",
+      "action": "整个人猛地端坐收肩，脚边的小鱼一甩就没了",
+      "screen": "pretend",
+      "screen_brief": "PPT 99% 进度条",
+      "pose": {
+        "arms": [
+          10,
+          -10
+        ]
+      },
+      "props": [
+        {
+          "asset": "fish",
+          "center": [
+            500,
+            446
+          ],
+          "scale": 0.9,
+          "angle": 22,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.35
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.18,
+              0
+            ],
+            [
+              0.22,
+              -9
+            ],
+            [
+              0.55,
+              -9
+            ],
+            [
+              0.62,
+              2
+            ],
+            [
+              0.82,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.22,
+              -4
+            ],
+            [
+              0.55,
+              -4
+            ],
+            [
+              0.62,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              10
+            ],
+            [
+              0.22,
+              2
+            ],
+            [
+              0.55,
+              2
+            ],
+            [
+              1,
+              10
+            ]
+          ]
+        },
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              -10
+            ],
+            [
+              0.22,
+              -2
+            ],
+            [
+              0.55,
+              -2
+            ],
+            [
+              1,
+              -10
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06_sneak",
+      "chapter": "藏②",
+      "caption": "桌下偷看",
+      "action": "低头把手机捧在桌沿下，眼睛在屏幕上左右乱瞟",
+      "screen": "sneak",
+      "screen_brief": "瞳孔左右乱瞟与 ...",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": 35,
+            "lower": 95
+          },
+          "right": {
+            "upper": -35,
+            "lower": -95
+          }
+        },
+        "head_angle": 14,
+        "offset": [
+          0,
+          4
+        ]
+      },
+      "props": [
+        {
+          "asset": "phone",
+          "center": [
+            320,
+            386
+          ],
+          "scale": 1.1
+        }
+      ],
+      "tracks": [
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              14
+            ],
+            [
+              0.5,
+              18
+            ],
+            [
+              1,
+              14
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              4
+            ],
+            [
+              0.5,
+              8
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "path": "bent_arms.left.lower",
+          "keys": [
+            [
+              0,
+              95
+            ],
+            [
+              0.5,
+              90
+            ],
+            [
+              1,
+              95
+            ]
+          ]
+        },
+        {
+          "path": "bent_arms.right.lower",
+          "keys": [
+            [
+              0,
+              -95
+            ],
+            [
+              0.5,
+              -90
+            ],
+            [
+              1,
+              -95
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07_buddy",
+      "chapter": "藏③",
+      "caption": "摸鱼搭子",
+      "action": "侧身抬手和对桌隔空击掌，肩膀跟着得意地晃",
+      "screen": "buddy",
+      "screen_brief": "双鱼对游与击掌星花",
+      "pose": {
+        "arms": [
+          0,
+          20
+        ]
+      },
+      "props": [
+        {
+          "asset": "impact",
+          "anchor": "right_wrist",
+          "offset": [
+            18,
+            0
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.7
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.1",
+          "keys": [
+            [
+              0,
+              20
+            ],
+            [
+              0.3,
+              104
+            ],
+            [
+              0.45,
+              60
+            ],
+            [
+              0.6,
+              104
+            ],
+            [
+              1,
+              20
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              -4
+            ],
+            [
+              0.5,
+              3
+            ],
+            [
+              1,
+              -4
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.45,
+              -5
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08_toilet",
+      "chapter": "藏④",
+      "caption": "带薪如厕",
+      "action": "左手攥着卷纸，小碎步一路小跑冲向厕所",
+      "screen": "toilet",
+      "screen_brief": "15MIN 计时与漏沙沙漏",
+      "pose": {
+        "arms": [
+          -35,
+          20
+        ],
+        "legs": [
+          -12,
+          12
+        ]
+      },
+      "props": [
+        {
+          "asset": "toilet_paper",
+          "anchor": "left_wrist",
+          "offset": [
+            0,
+            8
+          ],
+          "scale": 0.9,
+          "anim": {
+            "type": "sway",
+            "freq": 2,
+            "amp": 10
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "legs.0",
+          "keys": [
+            [
+              0,
+              -12
+            ],
+            [
+              0.5,
+              12
+            ],
+            [
+              1,
+              -12
+            ]
+          ]
+        },
+        {
+          "path": "legs.1",
+          "keys": [
+            [
+              0,
+              12
+            ],
+            [
+              0.5,
+              -12
+            ],
+            [
+              1,
+              12
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.25,
+              -7
+            ],
+            [
+              0.5,
+              0
+            ],
+            [
+              0.75,
+              -7
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              -35
+            ],
+            [
+              0.5,
+              -28
+            ],
+            [
+              1,
+              -35
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09_red99",
+      "chapter": "危①",
+      "caption": "消息 99+",
+      "action": "双手贴脸抓狂，整个人抖成筛子，红点在空中闪",
+      "screen": "red99",
+      "screen_brief": "红字抖动、红点角标与瞪眼",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": -25,
+            "lower": -155
+          },
+          "right": {
+            "upper": 25,
+            "lower": 155
+          }
+        }
+      },
+      "props": [
+        {
+          "asset": "red_dot",
+          "center": [
+            500,
+            160
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "blink",
+            "freq": 6,
+            "duty": 0.55
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.0",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.16,
+              -5
+            ],
+            [
+              0.32,
+              5
+            ],
+            [
+              0.48,
+              -5
+            ],
+            [
+              0.64,
+              5
+            ],
+            [
+              0.82,
+              -3
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              -5
+            ],
+            [
+              0.4,
+              5
+            ],
+            [
+              0.6,
+              -5
+            ],
+            [
+              0.8,
+              4
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              -2
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              -2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10_overload",
+      "chapter": "危②",
+      "caption": "临时加活",
+      "action": "一摞文件压在头顶晃悠，身体被压得一寸寸往下沉",
+      "screen": "overload",
+      "screen_brief": "OT/加班 与越堆越高的纸页",
+      "pose": {
+        "arms": [
+          4,
+          -4
+        ],
+        "head_angle": 10,
+        "offset": [
+          0,
+          8
+        ]
+      },
+      "props": [
+        {
+          "asset": "file_stack",
+          "center": [
+            320,
+            49
+          ],
+          "scale": 0.8,
+          "anim": {
+            "type": "sway",
+            "freq": 1,
+            "amp": 6
+          }
+        },
+        {
+          "asset": "sweat",
+          "center": [
+            474,
+            170
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.55
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              10
+            ],
+            [
+              0.5,
+              14
+            ],
+            [
+              1,
+              10
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              8
+            ],
+            [
+              0.5,
+              12
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              -3
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11_dead",
+      "chapter": "危③",
+      "caption": "战术装死",
+      "action": "双臂僵直垂着，只有身体在极小幅地抽一下，假装自己是台坏机器",
+      "screen": "dead",
+      "screen_brief": "404、单眼熄灭与扫描线",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "legs": [
+          0,
+          0
+        ],
+        "head_angle": 5
+      },
+      "props": [
+        {
+          "asset": "sweat",
+          "center": [
+            468,
+            166
+          ],
+          "scale": 0.9,
+          "anim": {
+            "type": "blink",
+            "freq": 5,
+            "duty": 0.4
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.25,
+              -2
+            ],
+            [
+              0.5,
+              0
+            ],
+            [
+              0.75,
+              -2
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              5
+            ],
+            [
+              0.25,
+              7
+            ],
+            [
+              0.5,
+              5
+            ],
+            [
+              0.75,
+              7
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12_caught",
+      "chapter": "危④",
+      "caption": "当场抓获",
+      "action": "双手贴脸冒冷汗，全身左右抽搐，屏幕直接花屏",
+      "screen": "caught",
+      "screen_brief": "ERR0R 花屏与红色噪点",
+      "pose": {
+        "arms": [
+          0,
+          0
+        ],
+        "bent_arms": {
+          "left": {
+            "upper": -25,
+            "lower": -155
+          },
+          "right": {
+            "upper": 25,
+            "lower": 155
+          }
+        }
+      },
+      "props": [
+        {
+          "asset": "sweat",
+          "center": [
+            150,
+            168
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "blink",
+            "freq": 4,
+            "duty": 0.55
+          }
+        },
+        {
+          "asset": "sweat",
+          "center": [
+            486,
+            180
+          ],
+          "scale": 0.85,
+          "anim": {
+            "type": "blink",
+            "freq": 5,
+            "duty": 0.45
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.0",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.15,
+              -6
+            ],
+            [
+              0.3,
+              6
+            ],
+            [
+              0.45,
+              -4
+            ],
+            [
+              0.6,
+              5
+            ],
+            [
+              0.78,
+              -3
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "interpolation": "step",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              -6
+            ],
+            [
+              0.4,
+              6
+            ],
+            [
+              0.6,
+              -6
+            ],
+            [
+              0.8,
+              5
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              -2
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              -2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13_offwork",
+      "chapter": "爽①",
+      "caption": "准点开溜",
+      "action": "抬腕看表确认 6PM，放下手就撒腿冲出画面",
+      "screen": "offwork",
+      "screen_brief": "6PM、星星眼与速度线",
+      "pose": {
+        "arms": [
+          -150,
+          -20
+        ],
+        "legs": [
+          -6,
+          6
+        ]
+      },
+      "props": [
+        {
+          "asset": "clock",
+          "anchor": "left_wrist",
+          "offset": [
+            0,
+            0
+          ],
+          "scale": 1
+        }
+      ],
+      "effects": [
+        {
+          "asset": "motion",
+          "center": [
+            500,
+            430
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "blink",
+            "freq": 4,
+            "duty": 0.5
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "arms.0",
+          "keys": [
+            [
+              0,
+              -150
+            ],
+            [
+              0.35,
+              -100
+            ],
+            [
+              0.6,
+              -150
+            ],
+            [
+              1,
+              -150
+            ]
+          ]
+        },
+        {
+          "path": "legs.0",
+          "keys": [
+            [
+              0,
+              -6
+            ],
+            [
+              0.5,
+              14
+            ],
+            [
+              1,
+              -6
+            ]
+          ]
+        },
+        {
+          "path": "legs.1",
+          "keys": [
+            [
+              0,
+              6
+            ],
+            [
+              0.5,
+              -14
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.15,
+              -8
+            ],
+            [
+              0.3,
+              0
+            ],
+            [
+              0.45,
+              -8
+            ],
+            [
+              0.6,
+              0
+            ],
+            [
+              0.75,
+              -8
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14_tgif",
+      "chapter": "爽②",
+      "caption": "周五万岁",
+      "action": "双臂高举连跳两下，礼花在四周炸开",
+      "screen": "tgif",
+      "screen_brief": "TGIF、星星眼与星花",
+      "pose": {
+        "arms": [
+          -117,
+          117
+        ],
+        "legs": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "props": [
+        {
+          "asset": "fireworks_a",
+          "center": [
+            110,
+            140
+          ],
+          "scale": 1,
+          "anim": {
+            "type": "blink",
+            "freq": 2,
+            "duty": 0.6
+          }
+        },
+        {
+          "asset": "fireworks_b",
+          "center": [
+            526,
+            130
+          ],
+          "scale": 0.9,
+          "anim": {
+            "type": "blink",
+            "freq": 3,
+            "duty": 0.5
+          }
+        },
+        {
+          "asset": "fireworks_c",
+          "center": [
+            470,
+            300
+          ],
+          "scale": 0.8,
+          "anim": {
+            "type": "blink",
+            "freq": 4,
+            "duty": 0.6
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              0
+            ],
+            [
+              0.2,
+              -28
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              -18
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "path": "legs.0",
+          "keys": [
+            [
+              0,
+              -8
+            ],
+            [
+              0.25,
+              8
+            ],
+            [
+              0.5,
+              -8
+            ],
+            [
+              0.75,
+              8
+            ],
+            [
+              1,
+              -8
+            ]
+          ]
+        },
+        {
+          "path": "legs.1",
+          "keys": [
+            [
+              0,
+              8
+            ],
+            [
+              0.25,
+              -8
+            ],
+            [
+              0.5,
+              8
+            ],
+            [
+              0.75,
+              -8
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        },
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              -2
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              1,
+              -2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15_chill",
+      "chapter": "爽③",
+      "caption": "带薪摸鱼",
+      "action": "歪着身子瘫靠在桌角鱼缸边，随呼吸慢悠悠晃",
+      "screen": "chill",
+      "screen_brief": "眯眼笑与小鱼的底游",
+      "pose": {
+        "rotation": 4,
+        "arms": [
+          8,
+          -8
+        ],
+        "head_angle": 10,
+        "offset": [
+          0,
+          6
+        ]
+      },
+      "props": [
+        {
+          "asset": "fish_bowl",
+          "center": [
+            496,
+            398
+          ],
+          "scale": 1.05
+        }
+      ],
+      "tracks": [
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              4
+            ],
+            [
+              0.5,
+              7
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              6
+            ],
+            [
+              0.5,
+              10
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              10
+            ],
+            [
+              0.5,
+              13
+            ],
+            [
+              1,
+              10
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16_dream_fish",
+      "chapter": "爽④",
+      "caption": "梦里摸鱼",
+      "action": "脑袋一点一点打起盹，头顶一条小鱼上下漂",
+      "screen": "dream_fish",
+      "screen_brief": "闭眼、zZ 与梦中之鱼",
+      "pose": {
+        "arms": [
+          10,
+          -10
+        ],
+        "head_angle": -8,
+        "offset": [
+          0,
+          5
+        ]
+      },
+      "props": [
+        {
+          "asset": "fish",
+          "center": [
+            464,
+            168
+          ],
+          "scale": 1.1,
+          "anim": {
+            "type": "bob",
+            "freq": 1,
+            "amp": 10
+          }
+        }
+      ],
+      "effects": [
+        {
+          "asset": "spark_green",
+          "center": [
+            146,
+            160
+          ],
+          "scale": 0.8,
+          "anim": {
+            "type": "blink",
+            "freq": 2,
+            "duty": 0.6
+          }
+        }
+      ],
+      "tracks": [
+        {
+          "path": "offset.1",
+          "keys": [
+            [
+              0,
+              5
+            ],
+            [
+              0.5,
+              9
+            ],
+            [
+              1,
+              5
+            ]
+          ]
+        },
+        {
+          "path": "head_angle",
+          "keys": [
+            [
+              0,
+              -8
+            ],
+            [
+              0.5,
+              -4
+            ],
+            [
+              1,
+              -8
+            ]
+          ]
+        },
+        {
+          "path": "rotation",
+          "keys": [
+            [
+              0,
+              2
+            ],
+            [
+              0.5,
+              -1
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

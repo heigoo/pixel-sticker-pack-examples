@@ -1,0 +1,38 @@
+{
+  "coordinate_system": "viewer-left / viewer-right; angles are counterclockwise degrees",
+  "character": "TRAE宝：黑色方形脑袋，脸是一块会发光的屏幕；哑光黑机身由规则方块像素拼成",
+  "parts": {
+    "front_head": {
+      "file": "parts/front_head.png",
+      "pivot": [153, 230],
+      "size": [308, 233],
+      "screen_box": [49, 72, 259, 180],
+      "screen_logical": [70, 36]
+    },
+    "front_torso": {
+      "file": "parts/front_torso.png",
+      "pivot": [75, 4],
+      "size": [151, 121]
+    },
+    "front_arm_left": {
+      "file": "parts/front_arm_left.png",
+      "pivot": [28, 14],
+      "size": [55, 129]
+    },
+    "front_arm_right": {
+      "file": "parts/front_arm_right.png",
+      "pivot": [27, 14],
+      "size": [55, 129]
+    },
+    "front_leg_left": {
+      "file": "parts/front_leg_left.png",
+      "pivot": [35, 5],
+      "size": [70, 89]
+    },
+    "front_leg_right": {
+      "file": "parts/front_leg_right.png",
+      "pivot": [35, 5],
+      "size": [71, 89]
+    }
+  }
+}

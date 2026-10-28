@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "pack": "TRAE宝编程搭档",
+  "defaults": {
+    "size": 512,
+    "outline": 8,
+    "fps": 12.5,
+    "duration_ms": 3200
+  },
+  "design": {
+    "character": "TRAE宝：黑色方形脑袋、屏幕即终端、哑光黑方块机身；16 幕体型比例不变",
+    "core_idea": "屏幕即终端：情绪全部写在代码、报错、进度条里；红仅报错与冲突，金仅部署成功，蓝仅待机",
+    "coordinates": "640×640；左右指观众视角；角度逆时针为正",
+    "overview_title": "TRAE宝编程搭档 / 16 幕像素表情",
+    "overview_subtitle": "码 · 卡 · 评 · 发   屏幕即终端 · 改一坏三",
+    "chapter_tones": {
+      "码": "#5ADB97",
+      "卡": "#EC6269",
+      "评": "#A9E6CC",
+      "发": "#F4CD70"
+    },
+    "chapters": "码卡评发",
+    "discipline": {
+      "red": [
+        "04_req_changed",
+        "05_error",
+        "08_broke_three",
+        "10_smells",
+        "11_reviewing",
+        "12_conflict",
+        "15_rollback"
+      ],
+      "gold": [
+        "14_deployed"
+      ],
+      "blue": []
+    }
+  },
+  "scenes": [
+    {
+      "id": "01_new_req",
+      "chapter": "码①",
+      "caption": "新需求来了",
+      "action": "双手悬空敲键盘，屏幕 NEW +1 跳字，光标一直在闪",
+      "screen": "new_req",
+      "screen_brief": "NEW +1 跳字、眯眼笑与闪烁光标",
+      "pose": {"arms": [30, -30]},
+      "props": [
+        {"asset": "keyboard", "center": [320, 436], "scale": 1.0}
+      ],
+      "tracks": [
+        {"path": "arms.0", "keys": [[0, 30], [0.25, 38], [0.5, 30], [0.75, 36], [1, 30]]},
+        {"path": "arms.1", "keys": [[0, -30], [0.25, -38], [0.5, -30], [0.75, -36], [1, -30]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.25, -5], [0.5, 0], [0.75, -4], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "spark_green", "center": [486, 148], "scale": 0.85, "anim": {"type": "blink", "freq": 2, "duty": 0.6}}
+      ]
+    },
+    {
+      "id": "02_autocomplete",
+      "chapter": "码②",
+      "caption": "自动补全中",
+      "action": "身体前倾盯着屏幕，代码一行行往上滚，手指不敢停",
+      "screen": "autocomplete",
+      "screen_brief": "两行代码滚动与半闭眼",
+      "pose": {"arms": [34, -34], "head_angle": 6, "rotation": -3},
+      "props": [
+        {"asset": "keyboard", "center": [320, 440], "scale": 1.0}
+      ],
+      "tracks": [
+        {"path": "head_angle", "keys": [[0, 6], [0.3, 11], [0.5, 6], [0.75, 9], [1, 6]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.3, 5], [0.5, 0], [0.75, 4], [1, 0]]},
+        {"path": "arms.0", "keys": [[0, 34], [0.3, 41], [0.5, 34], [0.75, 39], [1, 34]]},
+        {"path": "arms.1", "keys": [[0, -34], [0.3, -41], [0.5, -34], [0.75, -39], [1, -34]]}
+      ]
+    },
+    {
+      "id": "03_copy_paste",
+      "chapter": "码③",
+      "caption": "复制粘贴",
+      "action": "左手抱着剪贴板，右手左右翻找，COPY 计数往上跳",
+      "screen": "copy_paste",
+      "screen_brief": "COPY 计数与像素剪贴板",
+      "pose": {
+        "head_angle": 7,
+        "bent_arms": {
+          "left": {"upper": 38, "lower": 118},
+          "right": {"upper": -40, "lower": -75}
+        }
+      },
+      "props": [
+        {"asset": "clipboard", "anchor": "left_wrist", "offset": [16, 8], "scale": 0.9, "anim": {"type": "sway", "freq": 1, "amp": 4}}
+      ],
+      "tracks": [
+        {"path": "bent_arms.right.lower", "keys": [[0, -75], [0.3, -98], [0.5, -75], [0.75, -90], [1, -75]]},
+        {"path": "head_angle", "keys": [[0, 7], [0.3, 12], [0.5, 7], [0.75, 10], [1, 7]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.35, -4], [0.5, 0], [0.75, -3], [1, 0]]}
+      ]
+    },
+    {
+      "id": "04_req_changed",
+      "chapter": "码④",
+      "caption": "需求又改了",
+      "action": "全身一僵定在原地，屏幕红色 CHANGED 闪个不停",
+      "screen": "req_changed",
+      "screen_brief": "红色 CHANGED 闪与惊愕眼",
+      "pose": {"arms": [8, -8], "head_angle": -2},
+      "tracks": [
+        {"path": "rotation", "interpolation": "step", "keys": [[0, 0], [0.18, -5], [0.45, -5], [0.72, 3], [0.9, 0], [1, 0]]},
+        {"path": "head_angle", "interpolation": "step", "keys": [[0, -2], [0.2, -7], [0.55, -7], [0.8, 4], [0.92, -2], [1, -2]]},
+        {"path": "offset.0", "keys": [[0, 0], [0.08, 5], [0.16, 0], [0.24, -5], [0.32, 0], [0.4, 5], [0.48, 0], [0.56, -5], [0.64, 0], [0.72, 5], [0.8, 0], [0.88, -4], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "sweat", "center": [472, 168], "scale": 1, "anim": {"type": "blink", "freq": 3, "duty": 0.6}}
+      ]
+    },
+    {
+      "id": "05_error",
+      "chapter": "卡①",
+      "caption": "报错了",
+      "action": "双手贴脸抓狂，屏幕红色报错堆栈一行行滚过去",
+      "screen": "error",
+      "screen_brief": "红色 ERROR 与滚动堆栈",
+      "pose": {
+        "arms": [0, 0],
+        "bent_arms": {"left": {"upper": -25, "lower": -155}, "right": {"upper": 25, "lower": 155}}
+      },
+      "tracks": [
+        {"path": "offset.0", "interpolation": "step", "keys": [[0, 0], [0.16, -6], [0.34, 6], [0.52, -5], [0.7, 5], [0.88, 0], [1, 0]]},
+        {"path": "head_angle", "interpolation": "step", "keys": [[0, 0], [0.2, -5], [0.4, 5], [0.6, -5], [0.8, 4], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "sweat", "center": [168, 176], "scale": 1, "anim": {"type": "blink", "freq": 4, "duty": 0.55}},
+        {"asset": "sweat", "center": [480, 186], "scale": 0.85, "anim": {"type": "blink", "freq": 3, "duty": 0.6}}
+      ]
+    },
+    {
+      "id": "06_compile_fail",
+      "chapter": "卡②",
+      "caption": "编译不过",
+      "action": "被 99% 卡住，身体一寸寸往下沉，额头冒汗",
+      "screen": "compile_fail",
+      "screen_brief": "99% 卡住的进度条",
+      "pose": {"arms": [4, -4], "head_angle": 8, "offset": [0, 6]},
+      "tracks": [
+        {"path": "offset.1", "keys": [[0, 6], [0.4, 14], [0.55, 14], [1, 6]]},
+        {"path": "head_angle", "keys": [[0, 8], [0.4, 13], [0.55, 13], [1, 8]]},
+        {"path": "rotation", "keys": [[0, 0], [0.4, -3], [0.55, -3], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "sweat", "center": [474, 180], "scale": 1, "anim": {"type": "blink", "freq": 3, "duty": 0.55}},
+        {"asset": "sweat", "center": [140, 196], "scale": 0.8, "anim": {"type": "blink", "freq": 4, "duty": 0.5}}
+      ]
+    },
+    {
+      "id": "07_whos_code",
+      "chapter": "卡③",
+      "caption": "这谁写的",
+      "action": "歪着头盯一行陌生代码，屏幕冒出三个问号",
+      "screen": "whos_code",
+      "screen_brief": "陌生代码行与 ???",
+      "pose": {"arms": [14, -14], "head_angle": 10, "rotation": 3},
+      "tracks": [
+        {"path": "head_angle", "keys": [[0, 10], [0.3, 17], [0.5, 10], [0.75, 14], [1, 10]]},
+        {"path": "rotation", "keys": [[0, 3], [0.4, -2], [0.5, 3], [0.8, 0], [1, 3]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.35, -4], [0.5, 0], [0.75, -3], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "spark_green", "center": [496, 150], "scale": 0.7, "anim": {"type": "blink", "freq": 2, "duty": 0.6}}
+      ]
+    },
+    {
+      "id": "08_broke_three",
+      "chapter": "卡④",
+      "caption": "改一坏三",
+      "action": "改一处崩三处，全身抽搐，屏幕裂开花了",
+      "screen": "broke_three",
+      "screen_brief": "红色 DAMAGE、裂纹与花屏碎块",
+      "pose": {"arms": [18, -18], "head_angle": -6},
+      "tracks": [
+        {"path": "offset.0", "interpolation": "step", "keys": [[0, 0], [0.14, -7], [0.28, 7], [0.42, -6], [0.56, 6], [0.7, -4], [0.86, 0], [1, 0]]},
+        {"path": "head_angle", "interpolation": "step", "keys": [[0, -6], [0.2, 6], [0.4, -6], [0.6, 6], [0.8, -6], [1, -6]]},
+        {"path": "rotation", "interpolation": "step", "keys": [[0, 0], [0.25, -3], [0.5, 3], [0.75, -2], [0.9, 0], [1, 0]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.3, -4], [0.62, -1], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "sweat", "center": [176, 180], "scale": 0.9, "anim": {"type": "blink", "freq": 5, "duty": 0.5}}
+      ]
+    },
+    {
+      "id": "09_works_local",
+      "chapter": "评①",
+      "caption": "我本地好好的",
+      "action": "摊开双手耸耸肩，屏幕一个大写的 OK",
+      "screen": "works_local",
+      "screen_brief": "大号绿色 OK 与对勾",
+      "pose": {"arms": [-78, 78], "head_angle": 6},
+      "tracks": [
+        {"path": "arms.0", "keys": [[0, -78], [0.3, -92], [0.5, -78], [0.75, -86], [1, -78]]},
+        {"path": "arms.1", "keys": [[0, 78], [0.3, 92], [0.5, 78], [0.75, 86], [1, 78]]},
+        {"path": "head_angle", "keys": [[0, 6], [0.3, 12], [0.5, 6], [0.75, 9], [1, 6]]}
+      ],
+      "effects": [
+        {"asset": "spark_green", "center": [126, 152], "scale": 0.8, "anim": {"type": "blink", "freq": 2, "duty": 0.6}},
+        {"asset": "spark_green", "center": [512, 126], "scale": 0.7, "anim": {"type": "blink", "freq": 3, "duty": 0.55}}
+      ]
+    },
+    {
+      "id": "10_smells",
+      "chapter": "评②",
+      "caption": "你这写法有毒",
+      "action": "捂住鼻子往后一仰，屏幕上浮出一个骷髅",
+      "screen": "smells",
+      "screen_brief": "骷髅与红色 BUG",
+      "pose": {"rotation": -7, "arms": [40, -40], "offset": [-8, 4], "head_angle": -5},
+      "tracks": [
+        {"path": "rotation", "keys": [[0, -7], [0.3, -11], [0.5, -7], [0.75, -9], [1, -7]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.3, -4], [0.5, 0], [0.75, -3], [1, 0]]},
+        {"path": "head_angle", "keys": [[0, -5], [0.3, -10], [0.5, -5], [0.75, -8], [1, -5]]}
+      ]
+    },
+    {
+      "id": "11_reviewing",
+      "chapter": "评③",
+      "caption": "代码评审中",
+      "action": "举着放大镜一行行扫 diff，脑袋跟着上下动",
+      "screen": "reviewing",
+      "screen_brief": "红绿 diff 行逐行扫",
+      "pose": {
+        "head_angle": 8,
+        "bent_arms": {"right": {"upper": -30, "lower": -118}}
+      },
+      "props": [
+        {"asset": "magnifier", "anchor": "right_wrist", "offset": [30, 10], "scale": 1.35, "anim": {"type": "bob", "freq": 2, "amp": 3}}
+      ],
+      "tracks": [
+        {"path": "head_angle", "keys": [[0, 8], [0.3, 14], [0.5, 8], [0.75, 12], [1, 8]]},
+        {"path": "bent_arms.right.lower", "keys": [[0, -118], [0.3, -106], [0.5, -118], [0.75, -112], [1, -118]]},
+        {"path": "offset.1", "keys": [[0, 0], [0.35, -4], [0.5, 0], [0.75, -3], [1, 0]]}
+      ]
+    },
+    {
+      "id": "12_conflict",
+      "chapter": "评④",
+      "caption": "合并冲突",
+      "action": "双手左右互推，两坨代码撞在一起，中间红线亮起",
+      "screen": "conflict",
+      "screen_brief": "两块代码互撞与红线",
+      "pose": {"arms": [42, -42]},
+      "tracks": [
+        {"path": "arms.0", "keys": [[0, 42], [0.3, 62], [0.5, 42], [0.75, 56], [1, 42]]},
+        {"path": "arms.1", "keys": [[0, -42], [0.3, -62], [0.5, -42], [0.75, -56], [1, -42]]},
+        {"path": "rotation", "keys": [[0, 0], [0.3, -4], [0.5, 0], [0.75, 3], [1, 0]]},
+        {"path": "offset.0", "keys": [[0, 0], [0.3, 6], [0.5, 0], [0.75, 4], [1, 0]]}
+      ],
+      "effects": [
+        {"asset": "impact", "center": [320, 190], "scale": 0.9, "anim": {"type": "blink", "freq": 3, "duty": 0.5}}
+      ]
+    },
+    {
+      "id": "13_all_green",
+      "chapter": "发①",
+      "caption": "全绿了",
+      "action": "双臂高举蹦一下，屏幕 PASS 三行全绿",
+      "screen": "all_green",
+      "screen_brief": "PASS 与三行满绿勾",
+      "pose": {"arms": [-117, 117], "legs": [-6, 6], "offset": [0, -6]},
+      "tracks": [
+        {"path": "offset.1", "keys": [[0, -6], [0.22, -18], [0.44, -6], [0.66, -14], [1, -6]]},
+        {"path": "legs.0", "keys": [[0, -6], [0.25, 6], [0.5, -6], [0.75, 6], [1, -6]]},
+        {"path": "legs.1", "keys": [[0, 6], [0.25, -6], [0.5, 6], [0.75, -6], [1, 6]]}
+      ],
+      "effects": [
+        {"asset": "spark_green", "center": [124, 138], "scale": 0.9, "anim": {"type": "blink", "freq": 2, "duty": 0.6}},
+        {"asset": "spark_green", "center": [516, 120], "scale": 0.75, "anim": {"type": "blink", "freq": 3, "duty": 0.55}}
+      ]
+    },
+    {
+      "id": "14_deployed",
+      "chapter": "发②",
+      "caption": "部署成功",
+      "action": "踮脚庆祝，绿色箭头从屏幕里冲出来",
+      "screen": "deployed",
+      "screen_brief": "DEPLOY OK 与上升箭头",
+      "pose": {"arms": [-117, 117], "legs": [-4, 4], "head_angle": -4, "offset": [0, -4]},
+      "props": [
+        {"asset": "deploy_arrow", "center": [508, 168], "scale": 1.2, "anim": {"type": "bob", "freq": 2, "amp": 6}}
+      ],
+      "tracks": [
+        {"path": "offset.1", "keys": [[0, -4], [0.22, -16], [0.44, -4], [0.66, -12], [1, -4]]},
+        {"path": "arms.0", "keys": [[0, -117], [0.3, -104], [0.5, -117], [0.75, -110], [1, -117]]},
+        {"path": "arms.1", "keys": [[0, 117], [0.3, 104], [0.5, 117], [0.75, 110], [1, 117]]}
+      ],
+      "effects": [
+        {"asset": "spark_gold", "center": [136, 142], "scale": 0.8, "anim": {"type": "blink", "freq": 2, "duty": 0.6}},
+        {"asset": "spark_gold", "center": [430, 96], "scale": 0.65, "anim": {"type": "blink", "freq": 3, "duty": 0.5}}
+      ]
+    },
+    {
+      "id": "15_rollback",
+      "chapter": "发③",
+      "caption": "立刻回滚",
+      "action": "举起双手急退一步，屏幕红色 ROLLBACK 亮起",
+      "screen": "rollback",
+      "screen_brief": "红色 ROLLBACK 与下坠箭头",
+      "pose": {"rotation": 8, "arms": [56, -56], "head_angle": 4},
+      "props": [
+        {"asset": "branch_tag", "center": [478, 320], "scale": 1.15, "anim": {"type": "blink", "freq": 2, "duty": 0.6}}
+      ],
+      "tracks": [
+        {"path": "offset.0", "keys": [[0, 0], [0.25, -10], [0.5, 0], [0.75, -7], [1, 0]]},
+        {"path": "rotation", "keys": [[0, 8], [0.3, 13], [0.5, 8], [0.75, 11], [1, 8]]},
+        {"path": "head_angle", "keys": [[0, 4], [0.3, 10], [0.5, 4], [0.75, 7], [1, 4]]}
+      ]
+    },
+    {
+      "id": "16_offwork",
+      "chapter": "发④",
+      "caption": "下班了",
+      "action": "电量耗尽瘫着，屏幕暗下来只剩 zZ",
+      "screen": "offwork",
+      "screen_brief": "暗屏、ZZ 与半闭眼",
+      "pose": {"rotation": -6, "arms": [-8, 8], "head_angle": 12, "offset": [0, 10]},
+      "tracks": [
+        {"path": "rotation", "keys": [[0, -6], [0.35, -3], [0.55, -6], [0.8, -4], [1, -6]]},
+        {"path": "head_angle", "keys": [[0, 12], [0.35, 17], [0.55, 12], [0.8, 15], [1, 12]]},
+        {"path": "offset.1", "keys": [[0, 10], [0.35, 14], [0.55, 10], [0.8, 12], [1, 10]]}
+      ]
+    }
+  ]
+}

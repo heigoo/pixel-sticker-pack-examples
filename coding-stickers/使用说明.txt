@@ -1,0 +1,65 @@
+「AI 编程搭档」· TRAE宝 16 幕像素表情（pixel-sticker-pack 同源流水线）
+================================================================
+
+一、成品（output/，全部 512×512 透明底）
+
+png/            16 张带底部文案 PNG
+no-text/        16 张无文案 PNG
+gif/            16 张带文案循环 GIF
+gif-no-text/    16 张无文案循环 GIF
+overview.png    16 幕总览（无字缩略）
+overview.gif    16 幕同步动态总览
+screens-overview.png  16 幕屏幕表情特写
+keyframes-1/2.png     深色背景动作关键帧核对页
+manifest.json   每幕规格、强调色与素材使用清单
+
+GIF 统一 3.2 秒无限循环、12.5fps、40 帧；disposal=2 防残影，
+逐帧解码比对通过（见 test.py）。
+
+二、主题与叙事
+
+屏幕即终端：代码状态就是角色的表情来源。
+四章：码（新需求来了/自动补全中/复制粘贴/需求又改了）
+→ 卡（报错了/编译不过/这谁写的/改一坏三）
+→ 评（我本地好好的/你这写法有毒/代码评审中/合并冲突）
+→ 发（全绿了/部署成功/立刻回滚/下班了）。
+
+状态闭环：第 14 幕部署成功、第 15 幕立刻回滚，再回到第 16 幕下班；
+首幕与末幕同为平视姿态，构成一天开发轮回。
+
+色彩纪律：荧光绿/白为屏幕主色；红仅报错/坏味/冲突/回滚；
+黄仅庆祝部署成功。脚本自动审计，红/黄/蓝越界即渲染失败。
+
+三、素材库
+
+assets/parts/          角色部件（方头、屏幕脸、短四肢、无嘴）
+assets/manifest.json   部件裁切坐标与关节枢轴
+assets/props/          像素道具库：键盘、剪贴板、放大镜、骷髅、分支标签、
+                       上升箭头、扳手、火花、汗滴、问号等
+assets/screens/        16 幕屏幕表情静态帧与目录
+lib_base.py            调色板、5×7 字模、中文字模栅格化、屏幕表情原语
+                       （70×36 逻辑面板，t∈[0,1) 循环动画，t=0 即静态帧）
+scenes.json            16 幕唯一配置入口：姿态/道具/关键帧轨道
+
+四、运行
+
+    python -m pip install -r requirements.txt
+    python build_assets.py    # 仅改像素设计后需要
+    python render.py          # PNG + GIF + 总览
+    python test.py            # 全套验证
+
+常用：
+    python render.py --only 06_compile_fail --text "编译不过"
+    python render.py --static-only
+    python render.py --size 240 --fps 10 --duration-ms 2400
+    python test.py --quick    # 仅结构检查
+
+五、改配置不改素材
+
+每幕 = screen（16 种屏幕表情模式之一）+ pose + tracks（关键帧轨道）
++ props/effects（道具与特效，支持 wrist 锚点与 blink/pulse/bob/sway 循环动画）。
+轨道时间归一化 0–1，首尾同值即循环闭环；新增表情复制一幕换 id 即可。
+每幕至少 1 条轨道，否则静止段会被 GIF 编码器合并成几乎无动画——由
+test.py 的「每幕至少 1 条动作轨道」一项强制拦截。
+中文文案与屏幕文字一律由程序排版（cn_text 栅格化 / latin 5×7 点阵），
+不手绘、不交给生成模型。

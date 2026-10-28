@@ -1,0 +1,872 @@
+{
+  "pack": "TRAE宝编程搭档",
+  "design": {
+    "character": "TRAE宝：黑色方形脑袋、屏幕即终端、哑光黑方块机身；16 幕体型比例不变",
+    "core_idea": "屏幕即终端：情绪全部写在代码、报错、进度条里；红仅报错与冲突，金仅部署成功，蓝仅待机",
+    "coordinates": "640×640；左右指观众视角；角度逆时针为正",
+    "overview_title": "TRAE宝编程搭档 / 16 幕像素表情",
+    "overview_subtitle": "码 · 卡 · 评 · 发   屏幕即终端 · 改一坏三",
+    "chapter_tones": {
+      "码": "#5ADB97",
+      "卡": "#EC6269",
+      "评": "#A9E6CC",
+      "发": "#F4CD70"
+    },
+    "chapters": "码卡评发",
+    "discipline": {
+      "red": [
+        "04_req_changed",
+        "05_error",
+        "08_broke_three",
+        "10_smells",
+        "11_reviewing",
+        "12_conflict",
+        "15_rollback"
+      ],
+      "gold": [
+        "14_deployed"
+      ],
+      "blue": []
+    }
+  },
+  "size": 512,
+  "outline": 8,
+  "duration_ms": 3200,
+  "fps": 12.5,
+  "static_only": false,
+  "library_only": true,
+  "scenes": [
+    {
+      "id": "01_new_req",
+      "chapter": "码①",
+      "caption": "新需求来了",
+      "action": "双手悬空敲键盘，屏幕 NEW +1 跳字，光标一直在闪",
+      "screen": "new_req",
+      "screen_brief": "NEW +1 跳字、眯眼笑与闪烁光标",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "01_new_req.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 38,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 828956,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "01_new_req.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 38,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 619495,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/keyboard.png",
+        "props/spark_green.png",
+        "screens/new_req(动态)"
+      ]
+    },
+    {
+      "id": "02_autocomplete",
+      "chapter": "码②",
+      "caption": "自动补全中",
+      "action": "身体前倾盯着屏幕，代码一行行往上滚，手指不敢停",
+      "screen": "autocomplete",
+      "screen_brief": "两行代码滚动与半闭眼",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "02_autocomplete.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 37,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1039050,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "02_autocomplete.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 37,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 856855,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/keyboard.png",
+        "screens/autocomplete(动态)"
+      ]
+    },
+    {
+      "id": "03_copy_paste",
+      "chapter": "码③",
+      "caption": "复制粘贴",
+      "action": "左手抱着剪贴板，右手左右翻找，COPY 计数往上跳",
+      "screen": "copy_paste",
+      "screen_brief": "COPY 计数与像素剪贴板",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "03_copy_paste.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 36,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1013056,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "03_copy_paste.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 36,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 816163,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/clipboard.png",
+        "screens/copy_paste(动态)"
+      ]
+    },
+    {
+      "id": "04_req_changed",
+      "chapter": "码④",
+      "caption": "需求又改了",
+      "action": "全身一僵定在原地，屏幕红色 CHANGED 闪个不停",
+      "screen": "req_changed",
+      "screen_brief": "红色 CHANGED 闪与惊愕眼",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "04_req_changed.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 36,
+        "distinct_frames": 31,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 915042,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "04_req_changed.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 36,
+        "distinct_frames": 31,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 751854,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/sweat.png",
+        "screens/req_changed(动态)"
+      ]
+    },
+    {
+      "id": "05_error",
+      "chapter": "卡①",
+      "caption": "报错了",
+      "action": "双手贴脸抓狂，屏幕红色报错堆栈一行行滚过去",
+      "screen": "error",
+      "screen_brief": "红色 ERROR 与滚动堆栈",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "05_error.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 39,
+        "distinct_frames": 39,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 905811,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "05_error.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 39,
+        "distinct_frames": 39,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 783791,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/sweat.png",
+        "screens/error(动态)"
+      ]
+    },
+    {
+      "id": "06_compile_fail",
+      "chapter": "卡②",
+      "caption": "编译不过",
+      "action": "被 99% 卡住，身体一寸寸往下沉，额头冒汗",
+      "screen": "compile_fail",
+      "screen_brief": "99% 卡住的进度条",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "06_compile_fail.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 36,
+        "distinct_frames": 36,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1011576,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "06_compile_fail.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 36,
+        "distinct_frames": 36,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 849578,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/sweat.png",
+        "screens/compile_fail(动态)"
+      ]
+    },
+    {
+      "id": "07_whos_code",
+      "chapter": "卡③",
+      "caption": "这谁写的",
+      "action": "歪着头盯一行陌生代码，屏幕冒出三个问号",
+      "screen": "whos_code",
+      "screen_brief": "陌生代码行与 ???",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "07_whos_code.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 39,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1053136,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "07_whos_code.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 39,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 878696,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/spark_green.png",
+        "screens/whos_code(动态)"
+      ]
+    },
+    {
+      "id": "08_broke_three",
+      "chapter": "卡④",
+      "caption": "改一坏三",
+      "action": "改一处崩三处，全身抽搐，屏幕裂开花了",
+      "screen": "broke_three",
+      "screen_brief": "红色 DAMAGE、裂纹与花屏碎块",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "08_broke_three.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 24,
+        "distinct_frames": 24,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 595929,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "08_broke_three.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 24,
+        "distinct_frames": 24,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 524127,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/sweat.png",
+        "screens/broke_three(动态)"
+      ]
+    },
+    {
+      "id": "09_works_local",
+      "chapter": "评①",
+      "caption": "我本地好好的",
+      "action": "摊开双手耸耸肩，屏幕一个大写的 OK",
+      "screen": "works_local",
+      "screen_brief": "大号绿色 OK 与对勾",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "09_works_local.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 38,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1092055,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "09_works_local.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 38,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 831828,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/spark_green.png",
+        "screens/works_local(动态)"
+      ]
+    },
+    {
+      "id": "10_smells",
+      "chapter": "评②",
+      "caption": "你这写法有毒",
+      "action": "捂住鼻子往后一仰，屏幕上浮出一个骷髅",
+      "screen": "smells",
+      "screen_brief": "骷髅与红色 BUG",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "10_smells.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 36,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1114257,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "10_smells.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 36,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 877717,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "screens/smells(动态)"
+      ]
+    },
+    {
+      "id": "11_reviewing",
+      "chapter": "评③",
+      "caption": "代码评审中",
+      "action": "举着放大镜一行行扫 diff，脑袋跟着上下动",
+      "screen": "reviewing",
+      "screen_brief": "红绿 diff 行逐行扫",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "11_reviewing.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1061826,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "11_reviewing.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 864352,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/magnifier.png",
+        "screens/reviewing(动态)"
+      ]
+    },
+    {
+      "id": "12_conflict",
+      "chapter": "评④",
+      "caption": "合并冲突",
+      "action": "双手左右互推，两坨代码撞在一起，中间红线亮起",
+      "screen": "conflict",
+      "screen_brief": "两块代码互撞与红线",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "12_conflict.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 39,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 956749,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "12_conflict.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 39,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 790691,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/impact.png",
+        "screens/conflict(动态)"
+      ]
+    },
+    {
+      "id": "13_all_green",
+      "chapter": "发①",
+      "caption": "全绿了",
+      "action": "双臂高举蹦一下，屏幕 PASS 三行全绿",
+      "screen": "all_green",
+      "screen_brief": "PASS 与三行满绿勾",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "13_all_green.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 838094,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "13_all_green.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 723000,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/spark_green.png",
+        "screens/all_green(动态)"
+      ]
+    },
+    {
+      "id": "14_deployed",
+      "chapter": "发②",
+      "caption": "部署成功",
+      "action": "踮脚庆祝，绿色箭头从屏幕里冲出来",
+      "screen": "deployed",
+      "screen_brief": "DEPLOY OK 与上升箭头",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "gold"
+      ],
+      "gif": {
+        "file": "14_deployed.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1034459,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "14_deployed.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 856593,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/deploy_arrow.png",
+        "props/spark_gold.png",
+        "screens/deployed(动态)"
+      ]
+    },
+    {
+      "id": "15_rollback",
+      "chapter": "发③",
+      "caption": "立刻回滚",
+      "action": "举起双手急退一步，屏幕红色 ROLLBACK 亮起",
+      "screen": "rollback",
+      "screen_brief": "红色 ROLLBACK 与下坠箭头",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [
+        "red"
+      ],
+      "gif": {
+        "file": "15_rollback.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 38,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1046185,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "15_rollback.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 38,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 879532,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "props/branch_tag.png",
+        "screens/rollback(动态)"
+      ]
+    },
+    {
+      "id": "16_offwork",
+      "chapter": "发④",
+      "caption": "下班了",
+      "action": "电量耗尽瘫着，屏幕暗下来只剩 zZ",
+      "screen": "offwork",
+      "screen_brief": "暗屏、ZZ 与半闭眼",
+      "size": [
+        512,
+        512
+      ],
+      "accent_tones": [],
+      "gif": {
+        "file": "16_offwork.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 1043653,
+        "pixel_decode_verified": true
+      },
+      "gif_no_text": {
+        "file": "16_offwork.gif",
+        "size": [
+          512,
+          512
+        ],
+        "frames": 40,
+        "distinct_frames": 40,
+        "duration_ms": 3200,
+        "loop": 0,
+        "disposal": 2,
+        "bytes": 929104,
+        "pixel_decode_verified": true
+      },
+      "assets_used": [
+        "parts/front_arm_left.png",
+        "parts/front_arm_right.png",
+        "parts/front_head.png",
+        "parts/front_leg_left.png",
+        "parts/front_leg_right.png",
+        "parts/front_torso.png",
+        "screens/offwork(动态)"
+      ]
+    }
+  ]
+}

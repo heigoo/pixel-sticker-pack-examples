@@ -1,0 +1,254 @@
+{
+ "panel_size": [
+  70,
+  36
+ ],
+ "palette": {
+  "ink": "#101313",
+  "shell": "#2B3031",
+  "shadow": "#454E50",
+  "white": "#FFFFFF",
+  "paper": "#EEF3EE",
+  "green": "#5ADB97",
+  "mint": "#A9E6CC",
+  "gold": "#F4CD70",
+  "red": "#EC6269",
+  "blue": "#316BCA"
+ },
+ "assets": [
+  {
+   "id": "monday",
+   "file": "screens/monday.png",
+   "name": "上班如上坟",
+   "brief": "9AM、半闭眼与垂下的嘴角线",
+   "colors": [
+    "white",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "slack_start",
+   "file": "screens/slack_start.png",
+   "name": "摸鱼启动",
+   "brief": "小鱼巡游与眯眼笑",
+   "colors": [
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "busy",
+   "file": "screens/busy.png",
+   "name": "假装很忙",
+   "brief": "WORKING 与来回扫的进度条",
+   "colors": [
+    "white",
+    "green",
+    "mint"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "coffee",
+   "file": "screens/coffee.png",
+   "name": "咖啡续命",
+   "brief": "COFFEE、热气与半闭眼",
+   "colors": [
+    "green",
+    "white",
+    "mint"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "pretend",
+   "file": "screens/pretend.png",
+   "name": "老板来了",
+   "brief": "PPT 99% 进度条",
+   "colors": [
+    "white",
+    "green",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "sneak",
+   "file": "screens/sneak.png",
+   "name": "桌下偷看",
+   "brief": "瞳孔左右乱瞟与 ...",
+   "colors": [
+    "white",
+    "mint",
+    "green"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "buddy",
+   "file": "screens/buddy.png",
+   "name": "摸鱼搭子",
+   "brief": "双鱼对游与击掌星花",
+   "colors": [
+    "mint",
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "toilet",
+   "file": "screens/toilet.png",
+   "name": "带薪如厕",
+   "brief": "15MIN 计时与漏沙沙漏",
+   "colors": [
+    "white",
+    "mint",
+    "green"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "red99",
+   "file": "screens/red99.png",
+   "name": "消息 99+",
+   "brief": "红字抖动、红点角标与瞪眼",
+   "colors": [
+    "red",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "overload",
+   "file": "screens/overload.png",
+   "name": "临时加活",
+   "brief": "OT/加班 与越堆越高的纸页",
+   "colors": [
+    "mint",
+    "white",
+    "paper"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "dead",
+   "file": "screens/dead.png",
+   "name": "战术装死",
+   "brief": "404、单眼熄灭与扫描线",
+   "colors": [
+    "white",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "caught",
+   "file": "screens/caught.png",
+   "name": "当场抓获",
+   "brief": "ERR0R 花屏与红色噪点",
+   "colors": [
+    "red",
+    "green",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "offwork",
+   "file": "screens/offwork.png",
+   "name": "准点开溜",
+   "brief": "6PM、星星眼与速度线",
+   "colors": [
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "tgif",
+   "file": "screens/tgif.png",
+   "name": "周五万岁",
+   "brief": "TGIF、星星眼与星花",
+   "colors": [
+    "white",
+    "green"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "chill",
+   "file": "screens/chill.png",
+   "name": "带薪摸鱼",
+   "brief": "眯眼笑与小鱼的底游",
+   "colors": [
+    "mint",
+    "white",
+    "green"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "dream_fish",
+   "file": "screens/dream_fish.png",
+   "name": "梦里摸鱼",
+   "brief": "闭眼、zZ 与梦中之鱼",
+   "colors": [
+    "mint",
+    "shadow",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  }
+ ]
+}

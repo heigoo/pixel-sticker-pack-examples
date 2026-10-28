@@ -1,0 +1,253 @@
+{
+ "panel_size": [
+  70,
+  36
+ ],
+ "palette": {
+  "ink": "#101313",
+  "shell": "#2B3031",
+  "shadow": "#454E50",
+  "white": "#FFFFFF",
+  "paper": "#EEF3EE",
+  "green": "#5ADB97",
+  "mint": "#A9E6CC",
+  "gold": "#F4CD70",
+  "red": "#EC6269",
+  "blue": "#316BCA"
+ },
+ "assets": [
+  {
+   "id": "new_req",
+   "file": "screens/new_req.png",
+   "name": "新需求来了",
+   "brief": "NEW +1 跳字、眯眼笑与闪烁光标",
+   "colors": [
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "autocomplete",
+   "file": "screens/autocomplete.png",
+   "name": "自动补全中",
+   "brief": "两行代码滚动与半闭眼",
+   "colors": [
+    "green",
+    "white",
+    "mint"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "copy_paste",
+   "file": "screens/copy_paste.png",
+   "name": "复制粘贴",
+   "brief": "COPY 计数与像素剪贴板",
+   "colors": [
+    "green",
+    "white",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "req_changed",
+   "file": "screens/req_changed.png",
+   "name": "需求又改了",
+   "brief": "红色 CHANGED 闪与惊愕眼",
+   "colors": [
+    "red",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "error",
+   "file": "screens/error.png",
+   "name": "报错了",
+   "brief": "红色 ERROR 与滚动堆栈",
+   "colors": [
+    "red",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "compile_fail",
+   "file": "screens/compile_fail.png",
+   "name": "编译不过",
+   "brief": "99% 卡住的进度条",
+   "colors": [
+    "white",
+    "green",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "whos_code",
+   "file": "screens/whos_code.png",
+   "name": "这谁写的",
+   "brief": "陌生代码行与 ???",
+   "colors": [
+    "white",
+    "mint",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "broke_three",
+   "file": "screens/broke_three.png",
+   "name": "改一坏三",
+   "brief": "红色 DAMAGE、裂纹与花屏碎块",
+   "colors": [
+    "red",
+    "paper",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "works_local",
+   "file": "screens/works_local.png",
+   "name": "我本地好好的",
+   "brief": "大号绿色 OK 与对勾",
+   "colors": [
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "smells",
+   "file": "screens/smells.png",
+   "name": "你这写法有毒",
+   "brief": "骷髅与红色 BUG",
+   "colors": [
+    "red",
+    "paper",
+    "ink"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "reviewing",
+   "file": "screens/reviewing.png",
+   "name": "代码评审中",
+   "brief": "红绿 diff 行逐行扫",
+   "colors": [
+    "green",
+    "red",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "conflict",
+   "file": "screens/conflict.png",
+   "name": "合并冲突",
+   "brief": "两块代码互撞与红线",
+   "colors": [
+    "white",
+    "paper",
+    "red"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "all_green",
+   "file": "screens/all_green.png",
+   "name": "全绿了",
+   "brief": "PASS 与三行满绿勾",
+   "colors": [
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "deployed",
+   "file": "screens/deployed.png",
+   "name": "部署成功",
+   "brief": "DEPLOY OK 与上升箭头",
+   "colors": [
+    "green",
+    "white"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "rollback",
+   "file": "screens/rollback.png",
+   "name": "立刻回滚",
+   "brief": "红色 ROLLBACK 与下坠箭头",
+   "colors": [
+    "red",
+    "shadow"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  },
+  {
+   "id": "offwork",
+   "file": "screens/offwork.png",
+   "name": "下班了",
+   "brief": "暗屏、zZ 与半闭眼",
+   "colors": [
+    "shadow",
+    "white",
+    "mint"
+   ],
+   "logical_size": [
+    70,
+    36
+   ]
+  }
+ ]
+}

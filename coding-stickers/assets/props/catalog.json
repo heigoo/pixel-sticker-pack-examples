@@ -1,0 +1,266 @@
+{
+ "palette": {
+  "ink": "#101313",
+  "shell": "#2B3031",
+  "shadow": "#454E50",
+  "white": "#FFFFFF",
+  "paper": "#EEF3EE",
+  "green": "#5ADB97",
+  "mint": "#A9E6CC",
+  "gold": "#F4CD70",
+  "red": "#EC6269",
+  "blue": "#316BCA"
+ },
+ "assets": [
+  {
+   "id": "coin",
+   "file": "props/coin.png",
+   "name": "像素金币",
+   "brief": "币面刻 1 的积分金币",
+   "logical_size": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "coin_white",
+   "file": "props/coin_white.png",
+   "name": "逃跑积分币",
+   "brief": "白色币身，撒腿就跑的那种",
+   "logical_size": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "coin_stack",
+   "file": "props/coin_stack.png",
+   "name": "金币堆",
+   "brief": "两枚叠放金币",
+   "logical_size": [
+    23,
+    16
+   ]
+  },
+  {
+   "id": "calculator",
+   "file": "props/calculator.png",
+   "name": "计算器",
+   "brief": "绿屏与按键的计算器",
+   "logical_size": [
+    24,
+    30
+   ]
+  },
+  {
+   "id": "receipt",
+   "file": "props/receipt.png",
+   "name": "账单小票",
+   "brief": "带红色异常行的票据",
+   "logical_size": [
+    20,
+    30
+   ]
+  },
+  {
+   "id": "plug",
+   "file": "props/plug.png",
+   "name": "充电插头",
+   "brief": "带绿色指示灯的插头",
+   "logical_size": [
+    22,
+    20
+   ]
+  },
+  {
+   "id": "bolt",
+   "file": "props/bolt.png",
+   "name": "金色闪电",
+   "brief": "充值能量闪电",
+   "logical_size": [
+    18,
+    24
+   ]
+  },
+  {
+   "id": "flame",
+   "file": "props/flame.png",
+   "name": "红色火苗",
+   "brief": "烧积分的火苗",
+   "logical_size": [
+    13,
+    14
+   ]
+  },
+  {
+   "id": "sweat",
+   "file": "props/sweat.png",
+   "name": "白色汗滴",
+   "brief": "紧张汗滴",
+   "logical_size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "impact",
+   "file": "props/impact.png",
+   "name": "冲击爆星",
+   "brief": "白色冲击星芒",
+   "logical_size": [
+    17,
+    13
+   ]
+  },
+  {
+   "id": "check",
+   "file": "props/check.png",
+   "name": "绿色对勾",
+   "brief": "确认对勾",
+   "logical_size": [
+    20,
+    18
+   ]
+  },
+  {
+   "id": "question_red",
+   "file": "props/question_red.png",
+   "name": "红色问号",
+   "brief": "质疑问号",
+   "logical_size": [
+    12,
+    16
+   ]
+  },
+  {
+   "id": "heart_gold",
+   "file": "props/heart_gold.png",
+   "name": "金色爱心",
+   "brief": "谢意爱心",
+   "logical_size": [
+    13,
+    11
+   ]
+  },
+  {
+   "id": "spark_green",
+   "file": "props/spark_green.png",
+   "name": "绿色星花",
+   "brief": "绿色四角星花",
+   "logical_size": [
+    15,
+    11
+   ]
+  },
+  {
+   "id": "spark_gold",
+   "file": "props/spark_gold.png",
+   "name": "金色星花",
+   "brief": "金色四角星花",
+   "logical_size": [
+    15,
+    11
+   ]
+  },
+  {
+   "id": "fireworks_a",
+   "file": "props/fireworks_a.png",
+   "name": "礼花甲",
+   "brief": "金色礼花",
+   "logical_size": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "fireworks_b",
+   "file": "props/fireworks_b.png",
+   "name": "礼花乙",
+   "brief": "绿色礼花",
+   "logical_size": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "fireworks_c",
+   "file": "props/fireworks_c.png",
+   "name": "礼花丙",
+   "brief": "金绿白混合礼花",
+   "logical_size": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "motion",
+   "file": "props/motion.png",
+   "name": "速度线",
+   "brief": "白色速度线",
+   "logical_size": [
+    28,
+    12
+   ]
+  },
+  {
+   "id": "keyboard",
+   "file": "props/keyboard.png",
+   "name": "像素键盘",
+   "brief": "敲代码/自动补全的键盘",
+   "logical_size": [
+    26,
+    10
+   ]
+  },
+  {
+   "id": "clipboard",
+   "file": "props/clipboard.png",
+   "name": "像素剪贴板",
+   "brief": "复制粘贴的剪贴板",
+   "logical_size": [
+    14,
+    18
+   ]
+  },
+  {
+   "id": "magnifier",
+   "file": "props/magnifier.png",
+   "name": "像素放大镜",
+   "brief": "代码评审逐行扫",
+   "logical_size": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "skull",
+   "file": "props/skull.png",
+   "name": "像素骷髅",
+   "brief": "写法有毒的警告",
+   "logical_size": [
+    11,
+    9
+   ]
+  },
+  {
+   "id": "branch_tag",
+   "file": "props/branch_tag.png",
+   "name": "分支标签",
+   "brief": "回滚/切分支挂牌",
+   "logical_size": [
+    13,
+    7
+   ]
+  },
+  {
+   "id": "deploy_arrow",
+   "file": "props/deploy_arrow.png",
+   "name": "上升箭头",
+   "brief": "部署成功的绿箭头",
+   "logical_size": [
+    11,
+    14
+   ]
+  }
+ ]
+}

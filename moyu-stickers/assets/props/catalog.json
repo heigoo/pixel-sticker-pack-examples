@@ -1,0 +1,306 @@
+{
+ "palette": {
+  "ink": "#101313",
+  "shell": "#2B3031",
+  "shadow": "#454E50",
+  "white": "#FFFFFF",
+  "paper": "#EEF3EE",
+  "green": "#5ADB97",
+  "mint": "#A9E6CC",
+  "gold": "#F4CD70",
+  "red": "#EC6269",
+  "blue": "#316BCA"
+ },
+ "assets": [
+  {
+   "id": "coin",
+   "file": "props/coin.png",
+   "name": "像素金币",
+   "brief": "币面刻 1 的积分金币",
+   "logical_size": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "coin_white",
+   "file": "props/coin_white.png",
+   "name": "逃跑积分币",
+   "brief": "白色币身，撒腿就跑的那种",
+   "logical_size": [
+    15,
+    15
+   ]
+  },
+  {
+   "id": "coin_stack",
+   "file": "props/coin_stack.png",
+   "name": "金币堆",
+   "brief": "两枚叠放金币",
+   "logical_size": [
+    23,
+    16
+   ]
+  },
+  {
+   "id": "calculator",
+   "file": "props/calculator.png",
+   "name": "计算器",
+   "brief": "绿屏与按键的计算器",
+   "logical_size": [
+    24,
+    30
+   ]
+  },
+  {
+   "id": "receipt",
+   "file": "props/receipt.png",
+   "name": "账单小票",
+   "brief": "带红色异常行的票据",
+   "logical_size": [
+    20,
+    30
+   ]
+  },
+  {
+   "id": "plug",
+   "file": "props/plug.png",
+   "name": "充电插头",
+   "brief": "带绿色指示灯的插头",
+   "logical_size": [
+    22,
+    20
+   ]
+  },
+  {
+   "id": "bolt",
+   "file": "props/bolt.png",
+   "name": "金色闪电",
+   "brief": "充值能量闪电",
+   "logical_size": [
+    18,
+    24
+   ]
+  },
+  {
+   "id": "flame",
+   "file": "props/flame.png",
+   "name": "红色火苗",
+   "brief": "烧积分的火苗",
+   "logical_size": [
+    13,
+    14
+   ]
+  },
+  {
+   "id": "sweat",
+   "file": "props/sweat.png",
+   "name": "白色汗滴",
+   "brief": "紧张汗滴",
+   "logical_size": [
+    11,
+    11
+   ]
+  },
+  {
+   "id": "impact",
+   "file": "props/impact.png",
+   "name": "冲击爆星",
+   "brief": "白色冲击星芒",
+   "logical_size": [
+    17,
+    13
+   ]
+  },
+  {
+   "id": "check",
+   "file": "props/check.png",
+   "name": "绿色对勾",
+   "brief": "确认对勾",
+   "logical_size": [
+    20,
+    18
+   ]
+  },
+  {
+   "id": "question_red",
+   "file": "props/question_red.png",
+   "name": "红色问号",
+   "brief": "质疑问号",
+   "logical_size": [
+    12,
+    16
+   ]
+  },
+  {
+   "id": "heart_gold",
+   "file": "props/heart_gold.png",
+   "name": "金色爱心",
+   "brief": "谢意爱心",
+   "logical_size": [
+    13,
+    11
+   ]
+  },
+  {
+   "id": "spark_green",
+   "file": "props/spark_green.png",
+   "name": "绿色星花",
+   "brief": "绿色四角星花",
+   "logical_size": [
+    15,
+    11
+   ]
+  },
+  {
+   "id": "spark_gold",
+   "file": "props/spark_gold.png",
+   "name": "金色星花",
+   "brief": "金色四角星花",
+   "logical_size": [
+    15,
+    11
+   ]
+  },
+  {
+   "id": "fireworks_a",
+   "file": "props/fireworks_a.png",
+   "name": "礼花甲",
+   "brief": "金色礼花",
+   "logical_size": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "fireworks_b",
+   "file": "props/fireworks_b.png",
+   "name": "礼花乙",
+   "brief": "绿色礼花",
+   "logical_size": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "fireworks_c",
+   "file": "props/fireworks_c.png",
+   "name": "礼花丙",
+   "brief": "金绿白混合礼花",
+   "logical_size": [
+    17,
+    17
+   ]
+  },
+  {
+   "id": "motion",
+   "file": "props/motion.png",
+   "name": "速度线",
+   "brief": "白色速度线",
+   "logical_size": [
+    28,
+    12
+   ]
+  },
+  {
+   "id": "fish",
+   "file": "props/fish.png",
+   "name": "像素小鱼",
+   "brief": "摸鱼主题的核心提示物",
+   "logical_size": [
+    12,
+    7
+   ]
+  },
+  {
+   "id": "keyboard",
+   "file": "props/keyboard.png",
+   "name": "像素键盘",
+   "brief": "假装很忙的敲击对象",
+   "logical_size": [
+    24,
+    9
+   ]
+  },
+  {
+   "id": "coffee",
+   "file": "props/coffee.png",
+   "name": "像素咖啡杯",
+   "brief": "续命用的绿杯",
+   "logical_size": [
+    13,
+    14
+   ]
+  },
+  {
+   "id": "phone",
+   "file": "props/phone.png",
+   "name": "像素手机",
+   "brief": "桌下偷看与消息 99+",
+   "logical_size": [
+    13,
+    24
+   ]
+  },
+  {
+   "id": "file_stack",
+   "file": "props/file_stack.png",
+   "name": "文件堆",
+   "brief": "临时加活压上头顶",
+   "logical_size": [
+    22,
+    24
+   ]
+  },
+  {
+   "id": "clock",
+   "file": "props/clock.png",
+   "name": "像素手表",
+   "brief": "抬腕看 6PM",
+   "logical_size": [
+    13,
+    13
+   ]
+  },
+  {
+   "id": "badge",
+   "file": "props/badge.png",
+   "name": "像素工牌",
+   "brief": "挂在胸前的打工人身份",
+   "logical_size": [
+    12,
+    18
+   ]
+  },
+  {
+   "id": "red_dot",
+   "file": "props/red_dot.png",
+   "name": "红点气泡",
+   "brief": "99+ 的红色角标",
+   "logical_size": [
+    11,
+    12
+   ]
+  },
+  {
+   "id": "toilet_paper",
+   "file": "props/toilet_paper.png",
+   "name": "像素卷纸",
+   "brief": "带薪如厕的通行证",
+   "logical_size": [
+    10,
+    14
+   ]
+  },
+  {
+   "id": "fish_bowl",
+   "file": "props/fish_bowl.png",
+   "name": "像素鱼缸",
+   "brief": "桌角的摸鱼观赏位",
+   "logical_size": [
+    22,
+    20
+   ]
+  }
+ ]
+}
